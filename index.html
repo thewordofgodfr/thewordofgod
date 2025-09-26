@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Word of God — Accueil</title>
-  <meta name="description" content="TheWordOfGod.fr — Versets bibliques et ressources. Jean 3:16 / John 3:16." />
+  <meta name="description" content="TheWordOfGod.fr — Versets bibliques, méditations et ressources. Jean 3:16 / John 3:16." />
   <link rel="canonical" href="https://thewordofgod.fr/" />
   <meta property="og:title" content="The Word of God" />
   <meta property="og:description" content="Car Dieu a tant aimé le monde… / For God so loved the world… (Jean 3:16 / John 3:16)" />
@@ -26,8 +26,7 @@
     }
     * { box-sizing: border-box; }
     html, body {
-      height: 100%;
-      margin: 0;
+      height: 100%; margin: 0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
       color: var(--text);
       background: radial-gradient(1200px 800px at 20% -10%, #1f2937 0%, transparent 50%),
@@ -35,85 +34,32 @@
                   linear-gradient(135deg, var(--bg1), var(--bg2));
       background-attachment: fixed;
     }
-    .wrap {
-      min-height: 100%;
-      display: grid;
-      place-items: center;
-      padding: 24px;
-    }
+    .wrap { min-height: 100%; display: grid; place-items: center; padding: 24px; }
     .card {
-      width: 100%;
-      max-width: 880px;
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 24px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      width: 100%; max-width: 920px; background: var(--card-bg);
+      border: 1px solid var(--card-border); border-radius: 24px; box-shadow: var(--shadow);
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
       padding: 28px 28px 22px;
     }
-    header {
-      display: flex; 
-      align-items: center; 
-      justify-content: space-between; 
-      gap: 16px; 
-      flex-wrap: wrap;
-    }
-    .brand {
-      display: flex; align-items: center; gap: 12px;
-    }
-    .logo {
-      width: 40px; height: 40px; border-radius: 12px; 
-      background: linear-gradient(135deg,#22d3ee,#6366f1);
-      border: 1px solid var(--btn-border);
-      box-shadow: inset 0 0 12px rgba(255,255,255,0.3), 0 6px 18px rgba(2,132,199,0.25);
-    }
-    h1 { 
-      margin: 0; font-size: clamp(22px, 3.4vw, 34px); letter-spacing: 0.4px; 
-    }
-    .lang-switch {
-      display: flex; gap: 8px; align-items: center;
-    }
-    .btn {
-      border: 1px solid var(--btn-border);
-      background: var(--btn-bg);
-      color: var(--accent);
-      padding: 8px 12px;
-      border-radius: 12px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: transform .06s ease, background .2s ease, border-color .2s ease;
-      user-select: none;
-    }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .logo { width: 40px; height: 40px; border-radius: 12px; background: linear-gradient(135deg,#22d3ee,#6366f1); border: 1px solid var(--btn-border); box-shadow: inset 0 0 12px rgba(255,255,255,0.3), 0 6px 18px rgba(2,132,199,0.25); }
+    h1 { margin: 0; font-size: clamp(22px, 3.4vw, 34px); letter-spacing: 0.4px; }
+    .lang-switch { display: flex; gap: 8px; align-items: center; }
+    .btn { border: 1px solid var(--btn-border); background: var(--btn-bg); color: var(--accent); padding: 8px 12px; border-radius: 12px; cursor: pointer; font-weight: 600; transition: transform .06s ease, background .2s ease, border-color .2s ease; user-select: none; }
     .btn:hover { transform: translateY(-1px); }
-    .btn.active {
-      background: rgba(255,255,255,0.18);
-      border-color: rgba(255,255,255,0.35);
-    }
+    .btn.active { background: rgba(255,255,255,0.18); border-color: rgba(255,255,255,0.35); }
+    .sub { margin-top: 6px; color: var(--muted); font-size: 14px; }
     main { margin-top: 18px; }
-    .verse {
-      font-size: clamp(18px, 2.4vw, 24px);
-      line-height: 1.6;
-      margin: 14px 0 8px;
-      text-wrap: pretty;
-    }
+    .verse { font-size: clamp(18px, 2.4vw, 24px); line-height: 1.6; margin: 14px 0 8px; text-wrap: pretty; }
     .ref { color: var(--muted); margin-top: 4px; font-size: 14px; }
+    .coming { margin-top: 8px; font-size: 14px; color: var(--muted); }
     .cta-row { margin-top: 22px; display: flex; gap: 12px; flex-wrap: wrap; }
-    .cta {
-      text-decoration: none; 
-      border: 1px solid var(--btn-border);
-      background: var(--btn-bg);
-      color: var(--accent);
-      padding: 10px 14px;
-      border-radius: 12px;
-      font-weight: 700;
-      display: inline-flex; align-items: center; gap: 8px;
-    }
-    footer {
-      margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--card-border);
-      display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
-      font-size: 14px; color: var(--muted);
-    }
+    .cta { text-decoration: none; border: 1px solid var(--btn-border); background: var(--btn-bg); color: var(--accent); padding: 10px 14px; border-radius: 12px; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; }
+    .socials { margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .soc { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 12px; border: 1px solid var(--btn-border); background: var(--btn-bg); color: var(--accent); text-decoration: none; font-weight: 600; }
+    .soc svg { width: 18px; height: 18px; }
+    footer { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--card-border); display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 14px; color: var(--muted); }
     .email { color: var(--accent); font-weight: 600; text-decoration: none; }
     .small { font-size: 12px; }
   </style>
@@ -124,7 +70,10 @@
       <header>
         <div class="brand" aria-label="The Word of God">
           <div class="logo" aria-hidden="true"></div>
-          <h1>The Word of God</h1>
+          <div>
+            <h1>The Word of God</h1>
+            <div class="sub" id="tagline"></div>
+          </div>
         </div>
         <div class="lang-switch" aria-label="Changer de langue">
           <button class="btn" id="btn-fr" type="button">Français</button>
@@ -135,9 +84,25 @@
       <main>
         <p class="verse" id="verse"></p>
         <div class="ref" id="ref"></div>
+        <div class="coming" id="coming"></div>
         <div class="cta-row">
           <a class="cta" id="cta-more" href="#" aria-label="Plus de ressources"></a>
           <a class="cta" href="mailto:contact@thewordofgod.fr" aria-label="Nous contacter">✉️ contact@thewordofgod.fr</a>
+        </div>
+        <div class="socials">
+          <!-- Remplace # par tes liens -->
+          <a class="soc" id="yt" href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a4 4 0 0 0-2.8-2.8C18.8 3 12 3 12 3s-6.8 0-8.7.4A4 4 0 0 0 .5 6.2 41 41 0 0 0 0 12a41 41 0 0 0 .5 5.8 4 4 0 0 0 2.8 2.8C5.2 21 12 21 12 21s6.8 0 8.7-.4a4 4 0 0 0 2.8-2.8A41 41 0 0 0 24 12a41 41 0 0 0-.5-5.8zM9.8 15.5v-7l6 3.5-6 3.5z"/></svg>
+            YouTube
+          </a>
+          <a class="soc" id="sp" href="#" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1.5a10.5 10.5 0 1 0 0 21 10.5 10.5 0 0 0 0-21zm4.8 15.2a.8.8 0 0 1-1.1.2 12.3 12.3 0 0 0-9.3-.9.8.8 0 1 1-.5-1.5c3.7-1.1 7.8-.8 11 .9.4.2.5.7.2 1.1zm1.5-3.2c-.2.3-.7.4-1 .2a14.8 14.8 0 0 0-11.3-1 .8.8 0 1 1-.5-1.6c4.7-1.3 9.9-.9 14 .9.3.2.5.6.3 1zm.1-3.4c-.2.3-.6.4-1 .3a17.4 17.4 0 0 0-13.3-1 .8.8 0 0 1-.5-1.6c5.3-1.5 11.2-1 16 .9.4.2.6.6.4 1z"/></svg>
+            Spotify
+          </a>
+          <a class="soc" id="ig" href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zm6.3-3.2a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/></svg>
+            Instagram
+          </a>
         </div>
       </main>
 
@@ -151,16 +116,24 @@
   <script>
     (function() {
       const FR = {
-        verse: "Car Dieu a tant aimé le monde qu'il a donné son Fils unique, afin que quiconque croit en lui ne périsse point, mais qu'il ait la vie éternelle.",
-        ref: "Jean 3:16",
+        verses: [
+          { text: "Car Dieu a tant aimé le monde qu'il a donné son Fils unique, afin que quiconque croit en lui ne périsse point, mais qu'il ait la vie éternelle.", ref: "Jean 3:16" },
+          { text: "Ta parole est une lampe à mes pieds, et une lumière sur mon sentier.", ref: "Psaume 119:105" }
+        ],
         more: "Découvrir l'Évangile",
-        foot: "Bienvenue — que cette Parole vous accompagne aujourd'hui."
+        foot: "Bienvenue — que cette Parole vous accompagne aujourd'hui.",
+        tagline: "Un lieu pour découvrir, méditer et partager la Bonne Nouvelle.",
+        coming: "Le site complet arrive bientôt…"
       };
       const EN = {
-        verse: "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.",
-        ref: "John 3:16",
+        verses: [
+          { text: "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.", ref: "John 3:16" },
+          { text: "Your word is a lamp to my feet and a light to my path.", ref: "Psalm 119:105" }
+        ],
         more: "Explore the Gospel",
-        foot: "Welcome — may this Word guide you today."
+        foot: "Welcome — may this Word guide you today.",
+        tagline: "A place to discover, meditate, and share the Good News.",
+        coming: "The full site is coming soon…"
       };
 
       const els = {
@@ -170,23 +143,46 @@
         foot: document.getElementById('footline'),
         year: document.getElementById('year'),
         btnFr: document.getElementById('btn-fr'),
-        btnEn: document.getElementById('btn-en')
+        btnEn: document.getElementById('btn-en'),
+        tagline: document.getElementById('tagline'),
+        coming: document.getElementById('coming')
       };
 
       const saved = localStorage.getItem('twog-lang');
-      const prefers = saved || (navigator.language || navigator.userLanguage || 'en').toLowerCase().startsWith('fr') ? 'fr' : 'en';
+      const prefers = saved || ((navigator.language || navigator.userLanguage || 'en').toLowerCase().startsWith('fr') ? 'fr' : 'en');
+      let lang = prefers;
+      let rotationTimer = null;
+      let verseIndex = 0;
 
-      function setLang(lang) {
+      function render() {
         const t = lang === 'fr' ? FR : EN;
-        els.verse.textContent = t.verse;
-        els.ref.textContent = t.ref;
+        const v = t.verses[verseIndex % t.verses.length];
+        els.verse.textContent = v.text;
+        els.ref.textContent = v.ref;
         els.ctaMore.textContent = t.more + ' →';
         els.ctaMore.href = lang === 'fr' ? 'https://www.bible.com/fr/bible' : 'https://www.bible.com/bible';
         els.foot.textContent = t.foot;
+        els.tagline.textContent = t.tagline;
+        els.coming.textContent = t.coming;
         document.documentElement.lang = lang;
         els.btnFr.classList.toggle('active', lang === 'fr');
         els.btnEn.classList.toggle('active', lang === 'en');
+      }
+
+      function setLang(nextLang) {
+        lang = nextLang;
+        verseIndex = 0; // reset on language change
         localStorage.setItem('twog-lang', lang);
+        render();
+        restartRotation();
+      }
+
+      function restartRotation() {
+        if (rotationTimer) clearInterval(rotationTimer);
+        rotationTimer = setInterval(() => {
+          verseIndex++;
+          render();
+        }, 30000); // change every 30s
       }
 
       els.btnFr.addEventListener('click', () => setLang('fr'));
