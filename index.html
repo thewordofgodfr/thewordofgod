@@ -1,36 +1,201 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bienvenue sur mon site</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Word of God — Accueil</title>
+  <meta name="description" content="TheWordOfGod.fr — Versets bibliques et ressources. Jean 3:16 / John 3:16." />
+  <link rel="canonical" href="https://thewordofgod.fr/" />
+  <meta property="og:title" content="The Word of God" />
+  <meta property="og:description" content="Car Dieu a tant aimé le monde… / For God so loved the world… (Jean 3:16 / John 3:16)" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thewordofgod.fr/" />
+  <meta name="theme-color" content="#111827" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
-      background: linear-gradient(to bottom right, #1e3c72, #2a5298);
-      color: white;
+    :root {
+      --bg1: #0f172a; /* slate-900 */
+      --bg2: #1e293b; /* slate-800 */
+      --text: #e5e7eb; /* gray-200 */
+      --muted: #94a3b8; /* slate-400 */
+      --accent: #f1f5f9; /* slate-50 */
+      --btn-bg: rgba(255,255,255,0.1);
+      --btn-border: rgba(255,255,255,0.2);
+      --card-bg: rgba(255,255,255,0.06);
+      --card-border: rgba(255,255,255,0.12);
+      --shadow: 0 10px 30px rgba(0,0,0,0.35);
     }
-    h1 {
-      font-size: 3em;
-      margin-bottom: 20px;
+    * { box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background: radial-gradient(1200px 800px at 20% -10%, #1f2937 0%, transparent 50%),
+                  radial-gradient(1000px 700px at 120% 120%, #0ea5e9 0%, transparent 45%),
+                  linear-gradient(135deg, var(--bg1), var(--bg2));
+      background-attachment: fixed;
     }
-    a {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: white;
-      color: #2a5298;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+    .wrap {
+      min-height: 100%;
+      display: grid;
+      place-items: center;
+      padding: 24px;
     }
+    .card {
+      width: 100%;
+      max-width: 880px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 28px 28px 22px;
+    }
+    header {
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      gap: 16px; 
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .logo {
+      width: 40px; height: 40px; border-radius: 12px; 
+      background: linear-gradient(135deg,#22d3ee,#6366f1);
+      border: 1px solid var(--btn-border);
+      box-shadow: inset 0 0 12px rgba(255,255,255,0.3), 0 6px 18px rgba(2,132,199,0.25);
+    }
+    h1 { 
+      margin: 0; font-size: clamp(22px, 3.4vw, 34px); letter-spacing: 0.4px; 
+    }
+    .lang-switch {
+      display: flex; gap: 8px; align-items: center;
+    }
+    .btn {
+      border: 1px solid var(--btn-border);
+      background: var(--btn-bg);
+      color: var(--accent);
+      padding: 8px 12px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: transform .06s ease, background .2s ease, border-color .2s ease;
+      user-select: none;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn.active {
+      background: rgba(255,255,255,0.18);
+      border-color: rgba(255,255,255,0.35);
+    }
+    main { margin-top: 18px; }
+    .verse {
+      font-size: clamp(18px, 2.4vw, 24px);
+      line-height: 1.6;
+      margin: 14px 0 8px;
+      text-wrap: pretty;
+    }
+    .ref { color: var(--muted); margin-top: 4px; font-size: 14px; }
+    .cta-row { margin-top: 22px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .cta {
+      text-decoration: none; 
+      border: 1px solid var(--btn-border);
+      background: var(--btn-bg);
+      color: var(--accent);
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-weight: 700;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    footer {
+      margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--card-border);
+      display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+      font-size: 14px; color: var(--muted);
+    }
+    .email { color: var(--accent); font-weight: 600; text-decoration: none; }
+    .small { font-size: 12px; }
   </style>
 </head>
 <body>
-  <h1>Bienvenue sur mon site JNSP</h1>
-  <p>Ceci est ma première page d’accueil hébergée sur GitHub Pages.</p>
-  <a href="https://www.jnspmusic.com" target="_blank">Visiter JNSP Music</a>
+  <div class="wrap">
+    <div class="card" role="region" aria-label="Accueil The Word of God">
+      <header>
+        <div class="brand" aria-label="The Word of God">
+          <div class="logo" aria-hidden="true"></div>
+          <h1>The Word of God</h1>
+        </div>
+        <div class="lang-switch" aria-label="Changer de langue">
+          <button class="btn" id="btn-fr" type="button">Français</button>
+          <button class="btn" id="btn-en" type="button">English</button>
+        </div>
+      </header>
+
+      <main>
+        <p class="verse" id="verse"></p>
+        <div class="ref" id="ref"></div>
+        <div class="cta-row">
+          <a class="cta" id="cta-more" href="#" aria-label="Plus de ressources"></a>
+          <a class="cta" href="mailto:contact@thewordofgod.fr" aria-label="Nous contacter">✉️ contact@thewordofgod.fr</a>
+        </div>
+      </main>
+
+      <footer>
+        <div id="footline"></div>
+        <div class="small">© <span id="year"></span> thewordofgod.fr</div>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      const FR = {
+        verse: "Car Dieu a tant aimé le monde qu'il a donné son Fils unique, afin que quiconque croit en lui ne périsse point, mais qu'il ait la vie éternelle.",
+        ref: "Jean 3:16",
+        more: "Découvrir l'Évangile",
+        foot: "Bienvenue — que cette Parole vous accompagne aujourd'hui."
+      };
+      const EN = {
+        verse: "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.",
+        ref: "John 3:16",
+        more: "Explore the Gospel",
+        foot: "Welcome — may this Word guide you today."
+      };
+
+      const els = {
+        verse: document.getElementById('verse'),
+        ref: document.getElementById('ref'),
+        ctaMore: document.getElementById('cta-more'),
+        foot: document.getElementById('footline'),
+        year: document.getElementById('year'),
+        btnFr: document.getElementById('btn-fr'),
+        btnEn: document.getElementById('btn-en')
+      };
+
+      const saved = localStorage.getItem('twog-lang');
+      const prefers = saved || (navigator.language || navigator.userLanguage || 'en').toLowerCase().startsWith('fr') ? 'fr' : 'en';
+
+      function setLang(lang) {
+        const t = lang === 'fr' ? FR : EN;
+        els.verse.textContent = t.verse;
+        els.ref.textContent = t.ref;
+        els.ctaMore.textContent = t.more + ' →';
+        els.ctaMore.href = lang === 'fr' ? 'https://www.bible.com/fr/bible' : 'https://www.bible.com/bible';
+        els.foot.textContent = t.foot;
+        document.documentElement.lang = lang;
+        els.btnFr.classList.toggle('active', lang === 'fr');
+        els.btnEn.classList.toggle('active', lang === 'en');
+        localStorage.setItem('twog-lang', lang);
+      }
+
+      els.btnFr.addEventListener('click', () => setLang('fr'));
+      els.btnEn.addEventListener('click', () => setLang('en'));
+
+      els.year.textContent = new Date().getFullYear();
+      setLang(prefers);
+    })();
+  </script>
 </body>
 </html>
+
